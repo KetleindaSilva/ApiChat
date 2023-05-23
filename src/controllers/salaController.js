@@ -16,10 +16,10 @@ exports.entrar = async (iduser,idsala)=>{
    return false;
 
 }
-exports.enviarMensagem=async(nick,msg,idsala)=>{
+exports.enviarMensagem = async ( nick,msg, idsala)=>{
    const sala = await salaModel.buscarSala(idsala);
-   if(!sala.msgs){
-      sala.msgs=[];
+   if(! sala.msgs){
+      sala.msgs = [];
    }
    timestamp=Date.now()
    sala.msgs.push({

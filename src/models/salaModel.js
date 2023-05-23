@@ -1,13 +1,13 @@
-const db= require("./db");
+const db = require("./db");
 async function listarSalas() {
     return await db.findAll("Salas");
 }
 let buscarSala = async(idsala)=>{
     //{_id:iduser}
-    return db.findOne("salas",idsala);
+    return db.findOne("Salas",idsala);
 }
 let atualizarMensagens=async(sala)=>{
-    return await db.updateOne("salas",sala,{_id:sala._id});
+    return await db.updateOne("Salas",sala,{_id:sala._id});
 }
 
 let buscarMensagens = async (idsala,timestamp)=>{

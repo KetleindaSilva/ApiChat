@@ -54,5 +54,4 @@ app.use("/salas/mensagens/",router.get("/salas/mensagens",async(req,res)=>{
 
 
 
-
 module.exports=app;
